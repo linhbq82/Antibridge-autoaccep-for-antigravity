@@ -1,0 +1,85 @@
+{
+    "name": "antibridge-auto-accept",
+    "displayName": "AntiBridge-AutoAccept",
+    "description": "Auto Accept & Manual Accept for Antigravity with adjustable delay",
+    "version": "1.0.0",
+    "publisher": "linhbanbanhbao",
+    "engines": {
+        "vscode": "^1.60.0"
+    },
+    "activationEvents": [
+        "onStartupFinished"
+    ],
+    "main": "./extension.js",
+    "categories": [
+        "Other"
+    ],
+    "contributes": {
+        "configuration": {
+            "title": "AntiBridge-AutoAccept",
+            "properties": {
+                "antibridge.autoAcceptDelay": {
+                    "type": "number",
+                    "default": 2000,
+                    "minimum": 500,
+                    "maximum": 10000,
+                    "description": "Delay (ms) giữa mỗi lần Auto Accept. Mặc định: 2000ms"
+                },
+                "antibridge.autoStartEnabled": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Tự động bật Auto Accept khi khởi động Antigravity"
+                }
+            }
+        },
+        "commands": [
+            {
+                "command": "antibridge.toggleAutoAccept",
+                "title": "AntiBridge: Toggle Auto Accept ON/OFF"
+            },
+            {
+                "command": "antibridge.manualAccept",
+                "title": "AntiBridge: Manual Accept"
+            },
+            {
+                "command": "antibridge.manualReject",
+                "title": "AntiBridge: Manual Reject"
+            },
+            {
+                "command": "antibridge.increaseDelay",
+                "title": "AntiBridge: Increase Delay (+500ms)"
+            },
+            {
+                "command": "antibridge.decreaseDelay",
+                "title": "AntiBridge: Decrease Delay (-500ms)"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "antibridge.toggleAutoAccept",
+                "key": "ctrl+alt+shift+t",
+                "mac": "cmd+alt+shift+t"
+            },
+            {
+                "command": "antibridge.manualAccept",
+                "key": "ctrl+alt+shift+a",
+                "mac": "cmd+alt+shift+a"
+            },
+            {
+                "command": "antibridge.manualReject",
+                "key": "ctrl+alt+shift+r",
+                "mac": "cmd+alt+shift+r"
+            },
+            {
+                "command": "antibridge.increaseDelay",
+                "key": "ctrl+alt+shift+up",
+                "mac": "cmd+alt+shift+up"
+            },
+            {
+                "command": "antibridge.decreaseDelay",
+                "key": "ctrl+alt+shift+down",
+                "mac": "cmd+alt+shift+down"
+            }
+        ]
+    }
+}
