@@ -15,6 +15,18 @@
 
 ---
 
+## 🎯 What is AntiBridge-AutoAccept?
+
+This extension works with **AntiBridge** to automatically accept or reject AI actions in Antigravity. Perfect for hands-free AI coding sessions!
+
+### 🔗 Related Project
+
+| Project | Description |
+|---------|-------------|
+| 🌉 **[AntiBridge Remote Control](https://github.com/linhbq82/AntiBridge-Antigravity-remote)** | Main app - Control Antigravity from your phone |
+
+---
+
 ## 🚀 Quick Start
 
 ### ⚡ Installation
